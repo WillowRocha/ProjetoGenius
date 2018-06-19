@@ -1,0 +1,55 @@
+SD Card {
+	CS 		- 
+	SCK 	- 
+	MOSI	- 
+	MISO	- 
+	5V/VCC	- 
+	GND		- 
+}
+
+Bluetooth {
+	5V/VCC 	- 
+	GND		- 
+	RX		- 
+	TX		- 
+}
+
+Buzzer {
+	Fio 01 	- 
+	Fio 02	- 
+}
+Botões {
+	Botão 01 {
+		Fio 01 - 
+		Fio 02 - 
+		Led {
+			Fio 01 -
+			Fio 02 -
+		}
+	}
+	Botão 02 {
+		Fio 01 - 
+		Fio 02 - 
+		Led {
+			Fio 01 -
+			Fio 02 -
+		}
+	}
+	Botão 03 {
+		Fio 01 - 
+		Fio 02 - 
+		Led {
+			Fio 01 -
+			Fio 02 -
+		}
+	}
+	Botão 04 {
+		Fio 01 - 
+		Fio 02 - 
+		Led {
+			Fio 01 -
+			Fio 02 -
+		}
+	}
+	
+}

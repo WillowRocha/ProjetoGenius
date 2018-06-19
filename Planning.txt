@@ -1,0 +1,96 @@
+1. Codigo Genius - Willow e Pronto
+2. Bluetooh - OK
+3. AplicativoAndroid () - Verificar e Compilar
+4. Leitor SD - Testando
+5. Buzzer
+
+Estrutura geral Código:
+Vars
+
+	setup(){
+		Bluetooh
+		SDCard
+		Serial
+	}
+	loop{
+		- AguardarConexãoBluetooth (loop)
+		- LerCartao (Ranking)
+		- Buscar o numero do ultimo ID
+		- PedirNomeUsuário e aguardar (app e guarda na memória as infos do usuario) - Validar para receber no minimo 3 chars
+		- EnviarViaBluetooh (Ranking)
+		- AguardarStartAndroidBluetooh - Fica em loop ate receber a string start via bluetooth
+		- Game {
+			loop Até errar{
+				- RandomizaLeds
+				- ApresentaLeds (leds e Buzzer)
+				- AguardaResposta
+				- VerificaResposta
+				if(Certo){
+					- Incrementa level
+					- Continua (2 bipes rápidos)
+					- SalvaPontuação (memória / tipo de pontuação em analise)
+					- Atualiza Pontuação Android
+				} else {
+					- ApresentaErro (app)
+					- piscaTodosLeds (com bipes longos)
+					- Game Over Android
+				}
+			}
+			- SalvarPontuaçãoSD (ranking)
+			- Enviar ranking para o Android
+		}
+	}
+	
+Planning Android:
+	- Botão de start e Ranking no início
+	- Mostrar a pontuação 
+	- Botão (tipo os leds) - adicional
+	
+	Timeline:
+		- Mostrar o raking e o botão de start ao conectar e receber as informações via bluetooth. 
+		- Após clicar no botão inicial ele mostra a pontuação atual
+		- Se ganhar ele mostra o ranking e a posição dele destacada no Ranking.
+		- 
+
+		
+struct {
+	Long id;
+	String nomeUsuario;
+	int pontuacao;
+	int posicaoRanking;
+} Usuario;
+
+
+struct vetor orderBy ( pontuacao);
+
+Json {
+	Struct usuarioAtual;
+	Struct[] ranking;
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
