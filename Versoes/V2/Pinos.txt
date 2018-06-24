@@ -1,55 +1,54 @@
 SD Card {
-	CS 		- 
-	SCK 	- 
-	MOSI	- 
-	MISO	- 
-	5V/VCC	- 
-	GND		- 
+	CS 		- 53
+	SCK 	- 52
+	MOSI	- 51
+	MISO	- 50
+	5V/VCC	- 5V (proto)
+	GND		- GND (proto)
 }
 
 Bluetooth {
-	5V/VCC 	- 
-	GND		- 
-	RX		- 
-	TX		- 
+	5V/VCC	- 5V (proto)
+	GND		- GND (proto)
+	RX		- 1 (TX)
+	TX		- 0 (RX) // Sim, isso é invertido.
 }
 
 Buzzer {
-	Fio 01 	- 
-	Fio 02	- 
+	Fio 01 	- 54
+	Fio 02	- GND (proto)
 }
 Botões {
 	Botão 01 {
-		Fio 01 - 
-		Fio 02 - 
+		Fio 01 - 6
+		Fio 02 - GND (proto)
 		Led {
-			Fio 01 -
-			Fio 02 -
+			Fio 01 - 2
+			Fio 02 - GND (proto)
 		}
 	}
 	Botão 02 {
-		Fio 01 - 
-		Fio 02 - 
+		Fio 01 - 7
+		Fio 02 - GND (proto)
 		Led {
-			Fio 01 -
-			Fio 02 -
+			Fio 01 - 3
+			Fio 02 - GND (proto)
 		}
 	}
 	Botão 03 {
-		Fio 01 - 
-		Fio 02 - 
+		Fio 01 - 8
+		Fio 02 - GND (proto)
 		Led {
-			Fio 01 -
-			Fio 02 -
+			Fio 01 - 4
+			Fio 02 - GND (proto)
 		}
 	}
 	Botão 04 {
-		Fio 01 - 
-		Fio 02 - 
+		Fio 01 - 9
+		Fio 02 - GND (proto)
 		Led {
-			Fio 01 -
-			Fio 02 -
+			Fio 01 - 5
+			Fio 02 - GND (proto)
 		}
-	}
-	
+	}	
 }

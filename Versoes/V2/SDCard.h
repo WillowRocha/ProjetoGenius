@@ -55,7 +55,7 @@ int parseRankingFromJson(Ranking* ranking, String texto, int tam_texto){
   return rank_size;
 }
 
-JsonObject& parseaRankingFinalToJson(Ranking usuario, Ranking* ranking, int ranking_size){
+JsonObject& parseRankingFinalToJson(Ranking usuario, Ranking* ranking, int ranking_size){
   const size_t bufferSize = JSON_ARRAY_SIZE(ranking_size) + JSON_OBJECT_SIZE(3);
   DynamicJsonBuffer jsonBuffer(bufferSize);
   
@@ -70,7 +70,7 @@ JsonObject& parseaRankingFinalToJson(Ranking usuario, Ranking* ranking, int rank
 
   root["usuario"] = user;
   root["ranking"] = ranking_all;
-  return root;  
+  return root;
 }
 
 int buscaRankingNoArquivo(Ranking* ranking){
@@ -111,11 +111,11 @@ int salva_ranking_no_arquivo(Ranking *ranking, int ranking_size){
   return 0;
 }
 
-int adiciona_jogador_ranking(Ranking rank){
+int adiciona_jogador_ranking(Ranking usuario){
   Ranking ranking[RANK_SIZE];
   int ranking_size = buscaRankingNoArquivo(ranking);
-  ranking[ranking_size].id = rank.id;
-  ranking[ranking_size].nome = rank.nome;
-  ranking[ranking_size++].pontuacao = rank.pontuacao;
+  ranking[ranking_size].id = usuario.id;
+  ranking[ranking_size].nome = usuario.nome;
+  ranking[ranking_size++].pontuacao = usuario.pontuacao;
   return salva_ranking_no_arquivo(ranking, ranking_size);
 }
