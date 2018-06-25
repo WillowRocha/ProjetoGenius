@@ -1,6 +1,6 @@
 #include <SPI.h>
 #include <SD.h>
-#include "ArduinoJson-v5.13.2.h"
+#include "Json.h"
 
 #define FILE_NAME "ranking.txt"
 #define SEPARATOR ";"
@@ -83,8 +83,8 @@ int buscaRankingNoArquivo(Ranking* ranking){
       texto_lido += a;
       tam_texto++;
     }
+    rankingFile.close();
     if(tam_texto){
-      rankingFile.close();
       return parseRankingFromJson(ranking, texto_lido, tam_texto);
     }
   }
