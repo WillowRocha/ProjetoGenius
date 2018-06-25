@@ -11,11 +11,10 @@
 
 struct music {
   int n_size;
-  double musica[50];
-  double pitch[50];
+  double musica[14];
+  double pitch[14];
 };
 typedef struct music Music;
-
 
 double nota(double nota, int oitava){
   return nota*pow(2,oitava);
@@ -42,7 +41,9 @@ Music salvaMusica(double *musica, double *pitch, int n_size){
 
 Music brilha_brilha_estrelinha(){
   int n_size = 14;
-  double musica[14] = {nota(n_G,3), nota(n_G,3), nota(n_D,4), nota(n_D,4), nota(n_E,4), nota(n_E,4), nota(n_D,4), nota(n_C,4), nota(n_C,4),nota(n_B,3),nota(n_B,3),nota(n_A,3),nota(n_G,3), 0  };
+  double musica[14] = {nota(n_G,3),nota(n_G,3),nota(n_D,4),nota(n_D,4),nota(n_E,4),nota(n_E,4),nota(n_D,4),nota(n_C,4),nota(n_C,4),nota(n_B,3),nota(n_B,3),nota(n_A,3),nota(n_G,3),0};
   double pitch[14] =  {T,T,T,T,T,T,2*T,T,T,T,T,2*T,2*T,2*T};
   return salvaMusica(musica, pitch, n_size);
 }
+
+

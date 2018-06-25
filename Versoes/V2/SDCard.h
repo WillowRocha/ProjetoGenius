@@ -111,11 +111,13 @@ int salva_ranking_no_arquivo(Ranking *ranking, int ranking_size){
   return 0;
 }
 
-int adiciona_jogador_ranking(Ranking usuario){
+int adiciona_jogador_ranking(Ranking user){
   Ranking ranking[RANK_SIZE];
   int ranking_size = buscaRankingNoArquivo(ranking);
-  ranking[ranking_size].id = usuario.id;
-  ranking[ranking_size].nome = usuario.nome;
-  ranking[ranking_size++].pontuacao = usuario.pontuacao;
+  ranking[ranking_size].id = user.id;
+  ranking[ranking_size].nome = user.nome;
+  ranking[ranking_size++].pontuacao = user.pontuacao;
   return salva_ranking_no_arquivo(ranking, ranking_size);
 }
+
+

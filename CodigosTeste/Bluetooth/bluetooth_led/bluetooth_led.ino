@@ -1,9 +1,9 @@
 
 char incomingByte; // Char recebido pelo Serial.
-int LED = 13; // Pino do LED
+int LED = 2; // Pino do LED
 void setup() {
-        pinMode(13, LED);
-        Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
+        pinMode(LED, OUTPUT);
+        Serial.begin(115200);     // opens serial port, sets data rate to 9600 bps
 }
 
 
@@ -16,11 +16,11 @@ void loop() {
                // Serial.println(incomingByte);
                 if (incomingByte == 'L'){
                   Serial.println("LED: Ligado.");
-                  digitalWrite(13, HIGH);
+                  digitalWrite(LED, HIGH);
                   
                 }
                 if (incomingByte == 'D'){
-                  digitalWrite(13, LOW);
+                  digitalWrite(LED, LOW);
                   Serial.println("LED: Desligado.");
                 }
         }

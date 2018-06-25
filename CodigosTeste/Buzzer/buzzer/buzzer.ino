@@ -1,4 +1,4 @@
-const int buzzer = 8; //Constante armazenando o número do pino que vamos utilizar
+const int buzzer = 49; //Constante armazenando o número do pino que vamos utilizar
  
 void setup() {
   /*
